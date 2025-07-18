@@ -15,17 +15,20 @@ A dark-themed, minimalistic portfolio website template built with Next.js, TypeS
 ## Getting Started
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/kishgi/my-portfolio.git
 cd portfolio
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```

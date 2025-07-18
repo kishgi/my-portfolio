@@ -17,7 +17,7 @@ export function Hero() {
       >
         <h1 className="text-4xl md:text-6xl font-bold">
           Hi, I'm{" "}
-          <span className="text-primary">Your Name</span>
+          <span className="text-primary">Kishgintharaam Sathananthan</span>
         </h1>
         <h2 className="text-xl md:text-2xl text-muted-foreground">
           Full Stack Developer
