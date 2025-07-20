@@ -6,19 +6,18 @@ import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
-    <div className="bg-[#0f172a] text-slate-200 font-sans min-h-screen w-full flex justify-center">
-      <div className="flex w-full max-w-7xl">
+    <div className="bg-[#0f172a] text-slate-200 font-sans min-h-screen">
       <Sidebar />
-      <main className="px-16 py-20 flex-1">
-        <div className="max-w-3xl mx-auto space-y-32">
+      <main className="ml-[344px] px-6 py-20 flex justify-center">
+        <div className="max-w-xl w-full space-y-32 ml-36">
           <About />
           <Experience />
           <Projects />
           <Contact />
         </div>
       </main>
-      </div>
     </div>
   );
 }
+
 

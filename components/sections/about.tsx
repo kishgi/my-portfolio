@@ -113,7 +113,7 @@ export function About() {
   const row2 = techStack.slice(half);
 
   return (
-    <section id="about" className="scroll-mt-16">
+    <section id="about" className="scroll-mt-16 mt-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export function About() {
         transition={{ duration: 0.5 }}
         className="space-y-6"
       >
-        <h2 className="text-2xl font-bold mb-8">About</h2>
+        {/* <h2 className="text-2xl font-bold mb-8">About</h2> */}
         <div className="space-y-4 text-muted-foreground">
         <p>
             I'm an aspiring Software engineering undergraduate with a strong foundation in full-stack web
@@ -145,9 +145,9 @@ export function About() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-xl font-semibold mb-4">Tech Stack</h3>
-          <ScrollingRow items={row1} speed={60} />
-          <ScrollingRow items={row2} speed={60} />
+          {/* <h3 className="text-xl font-semibold mb-4">Tech Stack</h3> */}
+          <ScrollingRow items={row1} speed={90} />
+          <ScrollingRow items={row2} speed={90} />
         </div>
       </motion.div>
     </section>

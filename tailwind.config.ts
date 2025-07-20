@@ -75,6 +75,9 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      inset: {
+        '2/5': '40%',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

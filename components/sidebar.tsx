@@ -34,9 +34,11 @@ const navLinks = [
 
 export function Sidebar() {
   return (
-    <aside className="hidden md:flex fixed top-0 left-0 h-screen w-96 px-14 py-20 bg-slate-900/80 backdrop-blur-lg z-20 flex-col justify-between">
+<aside className="hidden lg:flex fixed top-1/2 left-2/5 -translate-x-full -translate-y-1/2 
+                 w-96 py-10 bg-slate-900/80 backdrop-blur-lg z-50 flex-col justify-between 
+                 h-full">
       {/* Top: Centered content */}
-      <div className="flex flex-col items-start justify-center flex-1">
+      <div className="flex flex-col items-start flex-1 mt-14">
         <h1 className="text-5xl font-extrabold mb-2 tracking-tight leading-tight">Kishgintharaam Sathananthan</h1>
         <h2 className="text-2xl font-semibold text-slate-400 mb-6">Software Engineering Undergraduate</h2>
         <p className="mb-10 text-slate-400 max-w-xs text-lg leading-relaxed">
