@@ -57,7 +57,7 @@ export function SidebarMobile() {
   }, []);
 
   return (
-    <aside className="fixed top-0 left-0 md:left-3/20  z-50 h-screen w-[60px] flex flex-col justify-between items-center bg-slate-900/80 backdrop-blur-lg px-10 py-6 lg:hidden">
+    <aside className="fixed top-0 left-0 md:left-3/20  z-50 h-screen w-[60px] flex flex-col justify-between items-center bg-black backdrop-blur-lg px-10 py-6 lg:hidden">
 
       {/* Rotated Name */}
       <div className="transform -rotate-90 text-4xl font-bold tracking-widest text-slate-300 whitespace-nowrap">
