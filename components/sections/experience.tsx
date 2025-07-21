@@ -35,7 +35,7 @@ export function Experience() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-2xl font-bold mb-8">Experience</h2>
+        {/* <h2 className="text-2xl font-bold mb-8">Experience</h2> */}
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <motion.div

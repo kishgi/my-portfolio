@@ -39,8 +39,8 @@ export function Projects() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-2xl font-bold mb-8">Projects</h2>
-        <div className="grid gap-8 md:grid-cols-2">
+        {/* <h2 className="text-2xl font-bold mb-8">Projects</h2> */}
+        <div className="flex flex-col gap-8">
           {projects.map((project, index) => (
             <motion.article
               key={index}
