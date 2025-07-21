@@ -50,8 +50,8 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-          <div className="grid md:grid-cols-2 gap-12">
+          {/* <h2 className="text-2xl font-bold mb-8">Contact Me</h2> */}
+          <div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Contact Form</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -111,29 +111,11 @@ export function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                  className="w-full px-6 py-3 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors"
                 >
                   Send Message
                 </button>
               </form>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Connect with Me</h3>
-              <div className="space-y-4">
-                {socialLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-lg border hover:bg-secondary transition-colors"
-                  >
-                    <link.icon size={20} className="text-primary" />
-                    <span>{link.name}</span>
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
         </motion.div>

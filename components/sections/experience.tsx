@@ -28,7 +28,7 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section id="experience" className="scroll-mt-20">
+    <section id="experience" className="scroll-mt-32">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

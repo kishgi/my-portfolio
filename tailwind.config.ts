@@ -60,6 +60,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-fira-code)"],
+        poppins: ["var(--font-poppins)"],
       },
       keyframes: {
         "accordion-down": {
