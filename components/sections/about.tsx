@@ -113,7 +113,7 @@ export function About() {
   const row2 = techStack.slice(half);
 
   return (
-    <section id="about" className="scroll-mt-16 mt-10">
+    <section id="about" className="scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
