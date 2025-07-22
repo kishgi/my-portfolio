@@ -7,7 +7,7 @@ import { SidebarMobile } from "@/components/sidebar_mob";
 
 export default function Home() {
   return (
-    <div className="bg-[#0f172a] text-slate-200 min-h-screen font-poppins">
+    <div className="bg-black text-slate-200 min-h-screen font-poppins">
       <div className="hidden md:flex ">
       <Sidebar />
       </div>
