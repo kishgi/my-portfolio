@@ -58,7 +58,7 @@ export function Sidebar() {
   }, []);
 
   return (
-    <aside className="hidden lg:flex fixed top-1/2 left-2/5 -translate-x-full -translate-y-1/2 w-96 py-10 bg-black backdrop-blur-lg z-50 flex-col justify-between h-full">
+    <aside className="hidden lg:flex fixed top-1/2 left-2/5 -translate-x-full -translate-y-1/2 w-96 py-10 bg-[#0f172a] backdrop-blur-lg z-50 flex-col justify-between h-full">
       {/* Top */}
       <div className="flex flex-col items-start flex-1 mt-14">
         <h1 className="text-5xl font-extrabold mb-2 tracking-tight leading-tight">
