@@ -57,7 +57,7 @@ export function SidebarMobile() {
   }, []);
 
   return (
-    <aside className="fixed top-5 left-4 z-50 h-screen w-[60px] flex flex-col items-center justify-between bg-[#0f172a] backdrop-blur-lg px-4 pt-10 pb-6 overflow-y-auto rounded-xl shadow-lg lg:hidden">
+    <aside className="fixed top-5 left-4 z-50 h-screen w-[60px] flex flex-col items-center justify-between bg-[#0f172a] backdrop-blur-lg px-8 pt-10 pb-6 overflow-y-auto rounded-xl shadow-lg lg:hidden">
       <div className="transform -rotate-90 text-3xl font-bold tracking-widest text-slate-300 whitespace-nowrap pr-36">
         Kishgintharaam <br /> Sathananthan
       </div>
