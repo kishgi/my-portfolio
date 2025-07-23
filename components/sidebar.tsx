@@ -17,7 +17,7 @@ const socialLinks = [
   },
   {
     name: "Instagram",
-    href: "https://instagram.com/yourusername",
+    href: "https://instagram.com/kishgi.yml",
     icon: Instagram,
   },
   {
@@ -75,28 +75,25 @@ export function Sidebar() {
 
         {/* Navigation */}
         <nav className="w-full mt-8 space-y-4">
-  {navLinks.map((link) => {
-    const isActive = activeSection === link.href.replace("#", "");
-    return (
-      <Link
-        key={link.name}
-        href={link.href}
-        className={`
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.href.replace("#", "");
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`
           relative flex items-center gap-3 text-sm font-medium px-1 transition-all duration-300
           ${isActive ? "text-white" : "text-slate-300 hover:text-white"}
           before:block before:h-[2px] before:bg-white before:transition-all before:duration-300
           before:rounded-full
           ${isActive ? "before:w-16" : "before:w-4"}
         `}
-      >
-        {link.name}
-      </Link>
-    );
-  })}
-</nav>
-
-
-
+              >
+                {link.name}
+              </Link>
+            );
+          })}
+        </nav>
       </div>
 
       {/* Bottom: Social */}
@@ -117,4 +114,3 @@ export function Sidebar() {
     </aside>
   );
 }
-

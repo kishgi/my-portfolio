@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import { Github, Linkedin, Instagram, Mail } from "lucide-react";
@@ -16,7 +16,7 @@ const socialLinks = [
   },
   {
     name: "Instagram",
-    href: "https://instagram.com/yourusername",
+    href: "https://instagram.com/kishgi.yml",
     icon: Instagram,
   },
   {
@@ -57,53 +57,11 @@ export function SidebarMobile() {
   }, []);
 
   return (
-    <aside className="fixed top-10 left-4 z-50 h-[90vh] w-[70px] flex flex-col justify-between items-center bg-[#0f172a] backdrop-blur-lg px-4 pt-32 md:pl-10 rounded-xl shadow-lg lg:hidden">
-
-      
-      <div className="transform -rotate-90 text-4xl font-bold tracking-widest text-slate-300 whitespace-nowrap">
+    <aside className="fixed top-5 left-4 z-50 h-screen w-[60px] flex flex-col items-center justify-between bg-[#0f172a] backdrop-blur-lg px-4 pt-10 pb-6 overflow-y-auto rounded-xl shadow-lg lg:hidden">
+      <div className="transform -rotate-90 text-3xl font-bold tracking-widest text-slate-300 whitespace-nowrap pr-36">
         Kishgintharaam <br /> Sathananthan
       </div>
 
-      {activeSection && (
-  <div className="relative inline-block" style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}>
-    <div className="text-xs font-semibold text-white">
-      {activeSection}
-    </div>
-    <svg
-      className="absolute left-full top-0"
-      width="20"
-      height="64"
-      viewBox="0 0 20 64"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ overflow: "visible" }}
-    >
-      <path
-        d="M0 0 C5 10, 15 10, 20 0 S35 -10, 40 0"
-        stroke="white"
-        strokeWidth="2"
-        fill="none"
-      >
-        <animate
-          attributeName="d"
-          dur="2s"
-          repeatCount="indefinite"
-          values="
-            M0 0 C5 10, 15 10, 20 0 S35 -10, 40 0;
-            M0 0 C5 0, 15 20, 20 0 S35 10, 40 0;
-            M0 0 C5 10, 15 10, 20 0 S35 -10, 40 0
-          "
-        />
-      </path>
-    </svg>
-  </div>
-)}
-
-
-
-
-
-      
       <div className="flex flex-col items-center gap-4">
         {socialLinks.map((link) => (
           <a

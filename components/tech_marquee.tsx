@@ -1,13 +1,41 @@
-'use client';
+"use client";
 
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
 import {
-  SiPython, SiJavascript, SiTypescript, SiC, SiHtml5, SiCss3, SiNextdotjs,
-  SiNodedotjs, SiExpress, SiFlask, SiJunit5, SiDocker, SiKubernetes, SiHelm,
-  SiJenkins, SiGithubactions, SiGitlab, SiAnsible, SiTerraform, SiNginx,
-  SiCloudflare, SiGit, SiPycharm, SiPostman, SiMongodb, SiRedis, SiReact,
-  SiPandas, SiNumpy, SiScikitlearn, SiTailwindcss, SiFramer, SiUbuntu,
+  SiPython,
+  SiJavascript,
+  SiTypescript,
+  SiC,
+  SiHtml5,
+  SiCss3,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiFlask,
+  SiJunit5,
+  SiDocker,
+  SiKubernetes,
+  SiHelm,
+  SiJenkins,
+  SiGithubactions,
+  SiGitlab,
+  SiAnsible,
+  SiTerraform,
+  SiNginx,
+  SiCloudflare,
+  SiGit,
+  SiPycharm,
+  SiPostman,
+  SiMongodb,
+  SiRedis,
+  SiReact,
+  SiPandas,
+  SiNumpy,
+  SiScikitlearn,
+  SiTailwindcss,
+  SiFramer,
+  SiUbuntu,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { SiGnubash } from "react-icons/si";
@@ -65,12 +93,14 @@ const TechCard = ({
 }) => (
   <div
     className={cn(
-      "flex items-center px-4 gap-2 py-2 rounded-xl border w-max",
+      "flex items-center gap-2 px-3 py-1.5 rounded-lg border w-max",
       "transition-colors"
     )}
   >
-    <Icon className="w-5 h-5 text-primary" />
-    <span className="text-sm whitespace-nowrap text-muted-foreground">{name}</span>
+    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+    <span className="text-xs sm:text-sm whitespace-nowrap text-muted-foreground">
+      {name}
+    </span>
   </div>
 );
 
@@ -88,10 +118,8 @@ export function TechMarquee() {
         ))}
       </Marquee>
 
-      
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-[#0f172a] to-transparent"></div>
-<div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-[#0f172a] to-transparent"></div>
-
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-[#0f172a] to-transparent"></div>
     </div>
   );
 }
