@@ -3,10 +3,6 @@
 import { motion } from "framer-motion";
 import { TechMarquee } from "../tech_marquee";
 
-
-
-
-
 export function About() {
   return (
     <section id="about" className="scroll-mt-32">
@@ -17,26 +13,32 @@ export function About() {
         transition={{ duration: 0.5 }}
         className="space-y-6"
       >
-        {/* <h2 className="text-2xl font-bold mb-8">About</h2> */}
+        {/* <h2 className=" text-xl sm:text-2xl font-bold mb-8 text-right lg:hidden">
+          About
+        </h2> */}
         <div className="space-y-4 text-muted-foreground">
-        <p>
-            I'm an aspiring Software engineering undergraduate with a strong foundation in full-stack web
-            development and a passion for automation, scalability, and cloud-native
-            solutions. I enjoy bridging the gap between development and operations by
-            building robust CI/CD pipelines and containerized environments.
+          <p>
+            I'm an aspiring Software engineering undergraduate with a strong
+            foundation in full-stack web development and expertising in{" "}
+            <b>DevOps and DevSecOps </b> practices. My passion lies in building
+            robust, scalable applications and automating deployment processes to
+            ensure reliability and security.
           </p>
           <p>
-            My journey started with frontend development using React and TypeScript, and
-            has grown into building full-stack applications backed by Docker, Kubernetes,
-            and GitHub Actions. I’ve worked on deploying scalable applications using
-            cloud-native tools and open-source technologies, always striving for
-            production-readiness.
+            My journey started with frontend development using <b> MERN </b>{" "}
+            stack and then <b> Next.js and Tailwind CSS </b>, where I honed my
+            skills in creating responsive and user-friendly interfaces. As I
+            progressed, I delved into backend technologies like <b> Node.js </b>{" "}
+            and <b> Express </b>, gaining a solid understanding of server-side
+            development and RESTful APIs.
           </p>
           <p>
-            I'm continuously learning and experimenting—whether it's exploring AWS
-            services, managing Kubernetes clusters, or improving deployment pipelines. I
-            also enjoy creating tech content and working on hands-on projects that
-            showcase my growing DevOps skill set.
+            But my interests didn't stop there. I ventured into the world of
+            DevOps, mastering tools like <b> Docker </b> and <b> Kubernetes </b>{" "}
+            to containerize applications and orchestrate their deployment. I
+            also embraced DevSecOps principles, integrating security practices
+            into the development lifecycle to ensure that applications are not
+            only functional but also secure.
           </p>
         </div>
 
