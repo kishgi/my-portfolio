@@ -57,12 +57,12 @@ export function SidebarMobile() {
   }, []);
 
   return (
-    <aside className="fixed top-5 left-4 z-50 h-screen w-[60px] flex flex-col items-center justify-between bg-[#0f172a] backdrop-blur-lg px-8 pt-10 pb-6 overflow-y-auto rounded-xl shadow-lg lg:hidden">
-      <div className="transform -rotate-90 text-3xl font-bold tracking-widest text-slate-300 whitespace-nowrap pr-36">
+    <aside className="fixed top-5 left-4 z-50 h-screen w-[60px] flex flex-col items-center justify-evenly bg-[#0f172a] backdrop-blur-lg px-8 overflow-hidden rounded-xl shadow-lg lg:hidden">
+      <div className="transform -rotate-90 text-3xl font-bold tracking-widest text-slate-300 whitespace-nowrap">
         Kishgintharaam <br /> Sathananthan
       </div>
 
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-4 pb-4">
         {socialLinks.map((link) => (
           <a
             key={link.name}
