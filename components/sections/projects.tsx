@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Github, ExternalLink, X } from "lucide-react";
 
@@ -12,37 +13,37 @@ type Project = {
   tags: string[];
   github: string;
   demo?: string;
+  img?: string;
 };
 
 const projects: Project[] = [
   {
-    title: "Cloud-Native E-commerce Platform",
+    title: "Cloud Native E-commerce Platform",
     description:
       "A full-stack e-commerce platform with DevOps tooling using React, Node.js, Redis, Docker, Kubernetes, and GitHub Actions.",
     fullDescription:
       "A full-stack e-commerce web application deployed with a complete DevOps toolchain. Built with React (Vite) and Tailwind CSS on the frontend, and Node.js + Express backend. Integrated Redis for caching, NGINX for reverse proxying, and Dockerized all components. Orchestrated with Kubernetes using Kustomize for environment-specific customization and Helm-readiness for future scalability. CI/CD implemented via GitHub Actions with Kubernetes Ingress routing for production-grade deployments.",
     tags: [
-      "React",
-      "Node.js",
+      "MERN",
       "Tailwind CSS",
       "Redis",
       "NGINX",
       "Docker",
       "Kubernetes",
       "Kustomize",
-      "GitHub Actions",
     ],
     github: "https://github.com/kishgi/chocolate-bravo",
+    img: "/images/MERN.png",
   },
   {
-    title: "Task Management App",
+    title: "CI/CD Enabled Java Application on Kubernetes",
     description:
-      "Real-time task management with drag-and-drop and team collaboration.",
+      "Java web app with full CI/CD pipeline, containerized and deployed to Kubernetes.",
     fullDescription:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    tags: ["React", "Firebase", "Material-UI", "Redux"],
-    github: "https://github.com/yourusername/project",
-    demo: "https://project-demo.com",
+      "A Java-based web application integrated with Jenkins for continuous integration and delivery, SonarQube for static code analysis, and Docker/Kubernetes for scalable container orchestration. The project demonstrates DevOps automation from code commit to deployment using GitHub, Jenkins pipelines, Docker images, and Kubernetes manifests.",
+    tags: ["Java", "Docker", "Kubernetes", "Jenkins", "SonarQube", "DevOps"],
+    github: "https://github.com/kishgi/java-app",
+    img: "/images/java.png",
   },
   {
     title: "Portfolio Website",
@@ -95,6 +96,30 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
+
+                {/* Icons at the bottom right */}
+                <div className="flex justify-end gap-4 mt-4">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Github className="h-5 w-5" />
+                  </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <ExternalLink className="h-5 w-5" />
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.article>
           ))}
@@ -104,17 +129,32 @@ export function Projects() {
       {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-          <div className="bg-card border border-border rounded-lg p-6 max-w-xl w-full relative">
+          <div className="bg-card border border-border rounded-lg p-6 max-w-3xl w-full relative overflow-y-auto max-h-[90vh]">
             <button
               onClick={() => setSelectedProject(null)}
               className="absolute top-3 right-3 text-muted-foreground hover:text-foreground"
             >
               <X className="h-5 w-5" />
             </button>
+
             <h3 className="text-2xl font-bold mb-4">{selectedProject.title}</h3>
-            <p className="text-sm text-muted-foreground mb-4">
+
+            {selectedProject.img && (
+              <div className="w-full mb-4">
+                <Image
+                  src={selectedProject.img}
+                  alt={selectedProject.title}
+                  width={800}
+                  height={400}
+                  className="rounded-lg object-cover w-full h-auto max-h-[400px]"
+                />
+              </div>
+            )}
+
+            <p className="text-base text-muted-foreground mb-4 leading-relaxed">
               {selectedProject.fullDescription}
             </p>
+
             <div className="flex flex-wrap gap-2 mb-4">
               {selectedProject.tags.map((tag) => (
                 <span
@@ -125,6 +165,7 @@ export function Projects() {
                 </span>
               ))}
             </div>
+
             <div className="flex gap-4">
               <a
                 href={selectedProject.github}
@@ -132,7 +173,7 @@ export function Projects() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                <Github className="h-5 w-5" />
+                <Github className="h-6 w-6" />
               </a>
               {selectedProject.demo && (
                 <a
@@ -141,7 +182,7 @@ export function Projects() {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  <ExternalLink className="h-5 w-5" />
+                  <ExternalLink className="h-6 w-6" />
                 </a>
               )}
             </div>
