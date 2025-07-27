@@ -29,7 +29,7 @@ const socialLinks = [
 
 const navLinks = [
   { name: "ABOUT", href: "#about" },
-  { name: "EXPERIENCE", href: "#experience" },
+  { name: "EDUCATION", href: "#education" },
   { name: "PROJECTS", href: "#projects" },
 ];
 
@@ -68,9 +68,8 @@ export function Sidebar() {
           Software Engineering Undergraduate
         </h2>
         <p className="mb-10 text-slate-400 max-w-xs text-md leading-relaxed">
-          Expertising in <b>Full Stack Development</b>, <b>DevOps</b> and{" "}
-          <b>Cloud Engineering</b>, with a passion for building scalable and
-          efficient systems.
+          Expertising in <b>DevOps</b> and <b>Cloud Engineering</b>, with a
+          passion for building scalable and efficient systems.
         </p>
 
         {/* Navigation */}

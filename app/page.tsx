@@ -4,6 +4,7 @@ import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
 import { Contact } from "@/components/sections/contact";
 import { SidebarMobile } from "@/components/sidebar_mob";
+import { Education } from "@/components/sections/education";
 
 export default function Home() {
   return (
@@ -26,7 +27,8 @@ export default function Home() {
                   "
         >
           <About />
-          <Experience />
+          <Education />
+          {/* <Experience /> */}
           <Projects />
           <Contact />
         </div>
