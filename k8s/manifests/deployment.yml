@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-portfolio
+  labels:
+    app: my-portfolio
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-portfolio
+  template:
+    metadata:
+      labels:
+        app: my-portfolio
+    spec:
+      containers:
+        - name: my-portfolio
+          image: kishgi/my-portfolio:latest
+          ports:
+            - containerPort: 3000
