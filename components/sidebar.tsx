@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail, Gitlab } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -11,13 +11,18 @@ const socialLinks = [
     icon: Github,
   },
   {
+    name: "GitLab",
+    href: "https://gitlab.com/kishgi",
+    icon: Gitlab,
+  },
+  {
     name: "LinkedIn",
     href: "https://linkedin.com/in/kishgi",
     icon: Linkedin,
   },
   {
     name: "Instagram",
-    href: "https://instagram.com/kishgi.yml",
+    href: "https://instagram.com/kishgintharaam",
     icon: Instagram,
   },
   {
