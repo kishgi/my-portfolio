@@ -18,25 +18,29 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Cloud Native E-commerce Platform",
+    title: "Full DevSecOps Pipeline for Netflix Clone",
     description:
-      "A full-stack e-commerce platform with DevOps tooling using React, Node.js, Redis, Docker, Kubernetes, and GitHub Actions.",
+      "Implemented a complete DevSecOps pipeline with Jenkins, SonarQube, Trivy, OWASP Dependency Check, Docker, Kubernetes (EKS), ArgoCD, and monitoring with Prometheus & Grafana.",
     fullDescription:
-      "A full-stack e-commerce web application deployed with a complete DevOps toolchain. Built with React (Vite) and Tailwind CSS on the frontend, and Node.js + Express backend. Integrated Redis for caching, NGINX for reverse proxying, and Dockerized all components. Orchestrated with Kubernetes using Kustomize for environment-specific customization and Helm-readiness for future scalability. CI/CD implemented via GitHub Actions with Kubernetes Ingress routing for production-grade deployments.",
+      "This project demonstrates a Netflix Clone deployed with a full DevSecOps toolchain. The focus is not on the frontend or backend features of the app, but on integrating automation, security, and monitoring into the software delivery lifecycle. The CI/CD pipeline is powered by Jenkins, with SonarQube for static analysis, Trivy and OWASP Dependency Check for vulnerability scanning, and Docker for containerization. The application is deployed to AWS EKS with GitOps-driven workflows using ArgoCD. Prometheus and Grafana provide real-time monitoring and observability of Jenkins, Kubernetes nodes, and the deployed app.",
     tags: [
-      "MERN",
-      "Tailwind CSS",
-      "Redis",
-      "NGINX",
+      "Jenkins",
+      "SonarQube",
+      "Trivy",
+      "OWASP Dependency Check",
       "Docker",
       "Kubernetes",
-      "Kustomize",
+      "EKS",
+      "ArgoCD",
+      "Prometheus",
+      "Grafana",
+      "DevSecOps",
     ],
-    github: "https://github.com/kishgi/chocolate-bravo",
-    img: "/images/MERN.png",
+    github: "https://github.com/kishgi/netflix-clone",
+    img: "/images/devsecops.png",
   },
   {
-    title: "CI/CD Enabled Java Application on Kubernetes",
+    title: "CI/CD pipeline for Java App using Jenkins",
     description:
       "Java web app with full CI/CD pipeline, containerized and deployed to Kubernetes.",
     fullDescription:

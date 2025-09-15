@@ -13,32 +13,30 @@ export function About() {
         transition={{ duration: 0.5 }}
         className="space-y-6"
       >
-        {/* <h2 className=" text-xl sm:text-2xl font-bold mb-8 text-right lg:hidden">
-          About
-        </h2> */}
+        {/* <h2 className=" text-3xl  font-bold text-right">About</h2> */}
         <div className="space-y-4 text-muted-foreground">
           <p>
-            I'm an aspiring Software engineering undergraduate with a strong
-            foundation in full-stack web development and expertising in{" "}
-            <b>DevOps and DevSecOps </b> practices. My passion lies in building
-            robust, scalable applications and automating deployment processes to
-            ensure reliability and security.
+            I’m an undergraduate in <b>Software Engineering</b> with a strong
+            focus on <b>DevOps</b> and <b>DevSecOps</b>. I build scalable,
+            reliable, and secure systems by automating deployment pipelines and
+            integrating security practices into development.
           </p>
           <p>
-            My journey started with frontend development using <b> MERN </b>{" "}
-            stack and then <b> Next.js and Tailwind CSS </b>, where I honed my
-            skills in creating responsive and user-friendly interfaces. As I
-            progressed, I delved into backend technologies like <b> Node.js </b>{" "}
-            and <b> Express </b>, gaining a solid understanding of server-side
-            development and RESTful APIs.
+            I have worked on projects like a <b>Netflix Clone</b> with full
+            CI/CD automation, security scans, and Kubernetes deployment, as well
+            as a <b>MERN stack project</b> containerized with Docker and
+            deployed using Helm charts. These projects strengthened my expertise
+            in{" "}
+            <b>
+              Docker, Kubernetes, Helm, Ansible, Terraform, Jenkins, GitHub
+              Actions
+            </b>
+            , and <b>AWS</b>.
           </p>
           <p>
-            But my interests didn't stop there. I ventured into the world of
-            DevOps, mastering tools like <b> Docker </b> and <b> Kubernetes </b>{" "}
-            to containerize applications and orchestrate their deployment. I
-            also embraced DevSecOps principles, integrating security practices
-            into the development lifecycle to ensure that applications are not
-            only functional but also secure.
+            My goal is to leverage DevOps and DevSecOps principles to deliver
+            high-quality, secure, and automated solutions for real-world
+            applications.
           </p>
         </div>
 
