@@ -29,7 +29,9 @@ export function Education() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        {/* <h2 className="text-2xl font-bold mb-8">Experience</h2> */}
+        <h3 className="text-xl font-semibold mb-4 border-b border-white border-border pb-2">
+          Side Quests
+        </h3>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <motion.div

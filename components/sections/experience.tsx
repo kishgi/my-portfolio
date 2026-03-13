@@ -4,25 +4,12 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    title: "Senior Frontend Developer",
-    company: "Tech Company",
-    period: "2022 - Present",
-    description: "Led frontend development for enterprise applications using React, TypeScript, and modern web technologies.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
-  },
-  {
-    title: "Frontend Developer",
-    company: "Digital Agency",
-    period: "2020 - 2022",
-    description: "Developed responsive web applications and collaborated with designers to implement pixel-perfect UIs.",
-    tags: ["JavaScript", "React", "CSS", "HTML"],
-  },
-  {
-    title: "Junior Developer",
-    company: "Startup",
-    period: "2019 - 2020",
-    description: "Built and maintained client websites, implemented new features, and fixed bugs.",
-    tags: ["HTML", "CSS", "JavaScript", "WordPress"],
+    title: "DevOps Engineer Intern",
+    company: "VinaSaai Inc, Torronto, Canada",
+    period: "2026 Mar - Present",
+    description:
+      "Implemented and maintained CI/CD pipelines using GitHub Actions, resulting in a 30% reduction in deployment time and improved code quality through automated testing and linting.",
+    tags: ["Docker", "Kubernetes", "CI/CD", "AWS", "Terraform"],
   },
 ];
 
@@ -35,7 +22,9 @@ export function Experience() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        {/* <h2 className="text-2xl font-bold mb-8">Experience</h2> */}
+        <h3 className="text-xl font-semibold mb-4 flex items-end justify-end border-b border-white border-border pb-2">
+          Places Where I Broke and Fixed Things
+        </h3>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <motion.div
@@ -54,7 +43,9 @@ export function Experience() {
                     {exp.company} • {exp.period}
                   </p>
                 </div>
-                <p className="text-sm text-muted-foreground">{exp.description}</p>
+                <p className="text-sm text-muted-foreground">
+                  {exp.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {exp.tags.map((tag) => (
                     <span
@@ -72,4 +63,4 @@ export function Experience() {
       </motion.div>
     </section>
   );
-} 
+}

@@ -34,6 +34,7 @@ const socialLinks = [
 
 const navLinks = [
   { name: "ABOUT", href: "#about" },
+  { name: "EXPERIENCE", href: "#experience" },
   { name: "EDUCATION", href: "#education" },
   { name: "PROJECTS", href: "#projects" },
 ];
@@ -51,7 +52,7 @@ export function Sidebar() {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.6 },
     );
 
     sectionIds.forEach((id) => {

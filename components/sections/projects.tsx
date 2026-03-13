@@ -11,7 +11,7 @@ type Project = {
   description: string;
   fullDescription: string;
   tags: string[];
-  github: string;
+  github?: string;
   demo?: string;
   img?: string;
 };
@@ -50,14 +50,24 @@ const projects: Project[] = [
     img: "/images/java.png",
   },
   {
-    title: "Portfolio Website",
+    title:
+      "Azure DevOps GitOps CI/CD Pipeline for a multiple microservices application",
     description:
-      "A sleek, animated portfolio built with Next.js and Tailwind CSS.",
+      "Implemented an end-to-end CI/CD pipeline using Azure DevOps, AKS, and ArgoCD to deploy the Docker Voting App with GitOps practices.",
     fullDescription:
-      "A modern portfolio website showcasing projects and skills, built with Next.js, Tailwind CSS, TypeScript, and Framer Motion for smooth animations.",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
-    github: "https://github.com/yourusername/project",
-    demo: "https://project-demo.com",
+      "Designed and implemented a modern DevOps pipeline by migrating the Docker Voting App sample into a Kubernetes-based CI/CD workflow on Microsoft Azure. The project uses Azure DevOps Pipelines to automatically build and push Docker images to Azure Container Registry (ACR). A self-hosted Azure VM build agent was configured to run Docker builds and pipeline jobs. The application is deployed to Azure Kubernetes Service (AKS) with deployment manifests automatically updated using shell scripts to include new image tags. GitOps practices were implemented using ArgoCD to continuously synchronize the Kubernetes cluster with the repository, enabling near real-time automated deployments. Secure image pulling from ACR was configured using ImagePullSecrets. This project demonstrates practical experience with CI/CD automation, Kubernetes deployment strategies, and GitOps workflows in the Azure ecosystem.",
+    tags: [
+      "Azure DevOps",
+      "Azure Kubernetes Service (AKS)",
+      "Azure Container Registry (ACR)",
+      "Docker",
+      "Kubernetes",
+      "ArgoCD",
+      "GitOps",
+      "Shell Scripting",
+      "CI/CD",
+    ],
+    img: "/images/azure.png",
   },
 ];
 
@@ -72,6 +82,9 @@ export function Projects() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
+        <h3 className="text-xl font-semibold mb-4 flex items-end justify-end border-b border-white border-border pb-2">
+          Things I Built Instead of Sleeping
+        </h3>
         <div className="flex flex-col gap-8">
           {projects.map((project, index) => (
             <motion.article
@@ -80,7 +93,7 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-lg border border-border bg-card p-6 cursor-pointer"
+              className="group relative overflow-hidden border border-border bg-card p-6 cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
               <div className="space-y-4">

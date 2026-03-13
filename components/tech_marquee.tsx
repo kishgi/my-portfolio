@@ -65,12 +65,9 @@ const techStack = [
   { name: "Ansible", icon: SiAnsible },
   { name: "Terraform", icon: SiTerraform },
   { name: "NGINX", icon: SiNginx },
-  { name: "Cloudflare Tunnel", icon: SiCloudflare },
   { name: "Git", icon: SiGit },
-  { name: "PyCharm", icon: SiPycharm },
   { name: "Postman", icon: SiPostman },
-  { name: "MongoDB Compass", icon: SiMongodb },
-  { name: "RedisInsight", icon: SiRedis },
+  { name: "MongoDB", icon: SiMongodb },
   { name: "React", icon: SiReact },
   { name: "pandas", icon: SiPandas },
   { name: "NumPy", icon: SiNumpy },
@@ -94,7 +91,7 @@ const TechCard = ({
   <div
     className={cn(
       "flex items-center gap-2 px-3 py-1.5 rounded-lg border w-max",
-      "transition-colors"
+      "transition-colors",
     )}
   >
     <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />

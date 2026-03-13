@@ -67,7 +67,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,7 +77,9 @@ export function Contact() {
           className="max-w-3xl mx-auto"
         >
           <div>
-            <h3 className="text-xl font-semibold mb-4">Contact Form</h3>
+            <h3 className="text-xl font-semibold mb-4 justify-end border-b border-white border-border pb-2">
+              Ping Me
+            </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Hidden input for Web3Forms access key */}
               <input type="hidden" name="access_key" value={access_key} />
