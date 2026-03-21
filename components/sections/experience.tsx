@@ -5,11 +5,19 @@ import { motion } from "framer-motion";
 const experiences = [
   {
     title: "DevOps Engineer Intern",
-    company: "VinaSaai Inc, Torronto, Canada",
-    period: "2026 Mar - Present",
+    company: "VinaSai Inc, Toronto, Canada",
+    period: "Mar 2026 - Present",
     description:
-      "Implemented and maintained CI/CD pipelines using GitHub Actions, resulting in a 30% reduction in deployment time and improved code quality through automated testing and linting.",
-    tags: ["Docker", "Kubernetes", "CI/CD", "AWS", "Terraform"],
+      "Reduced deployment time by building GitHub Actions CI/CD pipelines for automated build and deployment. Resolved SMTP delivery failures by developing a custom middleware for restricted environments. Improved system reliability through automated backups using shell scripting and cron. Ensured high availability using PM2 and optimized application delivery with NGINX reverse proxy and Cloudflare integration.",
+    tags: [
+      "GitHub Actions",
+      "CI/CD",
+      "NGINX",
+      "PM2",
+      "Cloudflare",
+      "Linux",
+      "Automation",
+    ],
   },
 ];
 
