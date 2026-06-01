@@ -83,7 +83,7 @@ export function Projects() {
         transition={{ duration: 0.5 }}
       >
         <h3 className="text-xl font-semibold mb-4 flex items-end justify-end border-b border-white border-border pb-2">
-          Things I Built Instead of Sleeping
+          Projects I&apos;ve Worked On
         </h3>
         <div className="flex flex-col gap-8">
           {projects.map((project, index) => (

@@ -30,7 +30,7 @@ export function Education() {
         transition={{ duration: 0.5 }}
       >
         <h3 className="text-xl font-semibold mb-4 border-b border-white border-border pb-2">
-          Side Quests
+          Education
         </h3>
         <div className="space-y-8">
           {experiences.map((exp, index) => (

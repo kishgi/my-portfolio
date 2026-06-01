@@ -31,7 +31,7 @@ export function Experience() {
         transition={{ duration: 0.5 }}
       >
         <h3 className="text-xl font-semibold mb-4 flex items-end justify-end border-b border-white border-border pb-2">
-          Places Where I Broke and Fixed Things
+          Professional Experience
         </h3>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
