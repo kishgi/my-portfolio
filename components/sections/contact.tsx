@@ -67,7 +67,12 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="">
+    <section id="contact" className="scroll-mt-32">
+      <div className="sticky top-0 z-20 -mx-6 mb-4 bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:hidden">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground">
+          Contact
+        </h2>
+      </div>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,9 +82,6 @@ export function Contact() {
           className="max-w-3xl mx-auto"
         >
           <div>
-            <h3 className="text-xl font-semibold mb-4 justify-end border-b border-white border-border pb-2">
-              Ping Me
-            </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Hidden input for Web3Forms access key */}
               <input type="hidden" name="access_key" value={access_key} />
@@ -146,14 +148,14 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors"
+                className="w-full px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               >
                 Send Message
               </button>
 
               {/* Submission result message */}
               {result && (
-                <p className="mt-4 text-center text-sm text-gray-600">
+                <p className="mt-4 text-center text-sm text-muted-foreground">
                   {result}
                 </p>
               )}

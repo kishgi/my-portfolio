@@ -1,39 +1,48 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Sidebar } from "@/components/sidebar";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
 import { Contact } from "@/components/sections/contact";
-import { SidebarMobile } from "@/components/sidebar_mob";
-import { Education } from "@/components/sections/education";
 
 export default function Home() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
-    <div className="bg-[#0f172a] text-slate-200 min-h-screen font-poppins">
-      <div className="hidden md:flex ">
-        <Sidebar />
-      </div>
+    <div className="bg-background text-foreground min-h-screen font-poppins relative">
+      {/* Spotlight cursor effect */}
+      <div
+        className="pointer-events-none fixed inset-0 z-30 transition duration-300 hidden md:block"
+        style={{
+          background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.06), transparent 80%)`,
+        }}
+      />
 
-      <div className="lg:hidden">
-        <SidebarMobile />
-      </div>
-      <main className="lg:ml-80 px-6 lg:py-20 flex justify-center">
-        <div
-          className="
-                    max-w-xl lg:max-w-2xl w-full space-y-32
-                    mt-10
-                    ml-0 sm:ml-10 lg:ml-0
-                    pl-20 sm:pl-6 lg:pl-20
-                    pr-4
-                  "
-        >
-          <About />
 
-          <Experience />
-          <Education />
-          <Projects />
-          <Contact />
+
+      <div className="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+        <div className="lg:flex lg:justify-between lg:gap-4">
+          <Sidebar />
+          <main className="pt-12 lg:w-[58%] lg:max-w-4xl lg:py-24">
+            <div className="space-y-24">
+              <About />
+              <Experience />
+              <Projects />
+              <Contact />
+            </div>
+          </main>
         </div>
-      </main>
+      </div>
     </div>
   );
 }

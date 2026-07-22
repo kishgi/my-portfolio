@@ -35,7 +35,6 @@ const socialLinks = [
 const navLinks = [
   { name: "ABOUT", href: "#about" },
   { name: "EXPERIENCE", href: "#experience" },
-  { name: "EDUCATION", href: "#education" },
   { name: "PROJECTS", href: "#projects" },
 ];
 
@@ -64,22 +63,22 @@ export function Sidebar() {
   }, []);
 
   return (
-    <aside className="hidden lg:flex fixed top-1/2 left-2/5 -translate-x-full -translate-y-1/2 w-96 py-10 bg-[#0f172a] backdrop-blur-lg z-50 flex-col justify-between h-full">
+    <header className="flex flex-col justify-between lg:sticky lg:top-0 lg:max-h-screen lg:w-[38%] lg:max-w-[380px] lg:py-24 py-12 lg:h-screen bg-transparent">
       {/* Top */}
-      <div className="flex flex-col items-start flex-1 mt-14">
-        <h1 className="text-5xl font-extrabold mb-2 tracking-tight leading-tight">
+      <div className="flex flex-col items-start flex-1">
+        <h1 className="text-4xl xl:text-5xl font-extrabold mb-2 tracking-tight leading-tight">
           Kishgintharaam Sathananthan
         </h1>
-        <h2 className="text-sm font-semibold text-slate-400 mb-6">
+        <h2 className="text-sm font-semibold text-muted-foreground mb-6">
           Software Engineering Undergraduate
         </h2>
-        <p className="mb-10 text-slate-400 max-w-xs text-md leading-relaxed">
+        <p className="mb-10 text-muted-foreground max-w-xs text-md leading-relaxed">
           Expertising in <b>DevOps</b> and <b>Cloud Engineering</b>, with a
           passion for building scalable and efficient systems.
         </p>
 
         {/* Navigation */}
-        <nav className="w-full mt-8 space-y-4">
+        <nav className="hidden lg:block w-full mt-8 space-y-4 font-mono">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.replace("#", "");
             return (
@@ -87,13 +86,14 @@ export function Sidebar() {
                 key={link.name}
                 href={link.href}
                 className={`
-          relative flex items-center gap-3 text-sm font-medium px-1 transition-all duration-300
-          ${isActive ? "text-white" : "text-slate-300 hover:text-white"}
-          before:block before:h-[2px] before:bg-white before:transition-all before:duration-300
-          before:rounded-full
-          ${isActive ? "before:w-16" : "before:w-4"}
+          group relative flex items-center gap-3 text-xs font-bold tracking-wider px-1 transition-all duration-300
+          ${isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}
         `}
               >
+                <span className={`
+                  h-[1px] transition-all duration-300 rounded-full
+                  ${isActive ? "w-16 bg-foreground" : "w-8 bg-muted-foreground/50 group-hover:w-16 group-hover:bg-foreground"}
+                `} />
                 {link.name}
               </Link>
             );
@@ -102,20 +102,20 @@ export function Sidebar() {
       </div>
 
       {/* Bottom: Social */}
-      <div className="flex items-center gap-7 pb-2">
+      <div className="flex items-center gap-7 pb-2 mt-8 lg:mt-0">
         {socialLinks.map((link) => (
           <a
             key={link.name}
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-400 hover:text-white transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <link.icon className="h-7 w-7" />
             <span className="sr-only">{link.name}</span>
           </a>
         ))}
       </div>
-    </aside>
+    </header>
   );
 }
