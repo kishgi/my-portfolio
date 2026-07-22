@@ -15,6 +15,14 @@ const allProjects = [
   },
   {
     year: "2026",
+    title: "Match My Stuff - AI Real-time Lost & Found App",
+    madeAt: "Buildathon (3rd Place)",
+    builtWith: ["Next.js", "Typescript", "Firebase"],
+    linkText: "matchmystuff.vercel.app",
+    url: "https://matchmystuff.vercel.app/",
+  },
+  {
+    year: "2026",
     title: "Full DevSecOps Pipeline for Netflix Clone",
     madeAt: "Personal Project",
     builtWith: [
@@ -81,7 +89,7 @@ export default function ProjectsArchive() {
                 <th className="py-4 px-4">Project</th>
                 <th className="py-4 px-4 hidden md:table-cell">Made at</th>
                 <th className="py-4 px-4 hidden lg:table-cell">Built with</th>
-                <th className="py-4 pl-4">Link</th>
+                <th className="py-4 pl-4 hidden sm:table-cell">Link</th>
               </tr>
             </thead>
             <tbody>
@@ -100,7 +108,19 @@ export default function ProjectsArchive() {
 
                   {/* Project Name */}
                   <td className="py-4 px-4 text-sm font-semibold text-foreground align-middle group-hover:text-primary transition-colors">
-                    {project.title}
+                    {project.url ? (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline inline-flex items-center gap-1.5"
+                      >
+                        {project.title}
+                        <ExternalLink size={12} className="inline-block sm:hidden text-muted-foreground" />
+                      </a>
+                    ) : (
+                      project.title
+                    )}
                   </td>
 
                   {/* Made At */}
@@ -123,7 +143,7 @@ export default function ProjectsArchive() {
                   </td>
 
                   {/* Link */}
-                  <td className="py-4 pl-4 text-sm align-middle">
+                  <td className="py-4 pl-4 text-sm align-middle hidden sm:table-cell">
                     {project.url ? (
                       <a
                         href={project.url}

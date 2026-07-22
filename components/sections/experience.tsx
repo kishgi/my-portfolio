@@ -89,7 +89,7 @@ export function Experience() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-sm font-semibold text-foreground hover:text-primary transition-colors group"
           >
-            View Full Résumé
+            View My Résumé
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
               ↗
             </span>
