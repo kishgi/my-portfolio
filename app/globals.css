@@ -7,7 +7,8 @@
 @layer base {
   :root {
     --font-poppins: "Poppins";
-    --background: 198 18% 16%;
+    /* --background: #212c30; */
+    --background: #0b1215;
     --foreground: 210 40% 98%;
     --card: 198 18% 20%;
     --card-foreground: 210 40% 98%;
@@ -30,7 +31,8 @@
   }
 
   .dark {
-    --background: 198 18% 16%;
+    /* --background: #212c30; */
+    --background: #0b1215;
     --foreground: 210 40% 98%;
     --card: 198 18% 20%;
     --card-foreground: 210 40% 98%;
@@ -89,7 +91,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--background));
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
