@@ -58,7 +58,7 @@ const allProjects = [
 
 export default function ProjectsArchive() {
   return (
-    <div className="bg-[#0b1215] text-slate-200 min-h-screen font-poppins px-6 py-12 md:px-24 md:py-20 lg:px-32">
+    <div className="bg-[#0b1215] text-slate-200 min-h-screen font-sans px-6 py-12 md:px-24 md:py-20 lg:px-32">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Navigation / Header */}
         <div className="space-y-4">
@@ -134,7 +134,7 @@ export default function ProjectsArchive() {
                       {project.builtWith.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-0.5 text-xs rounded-full bg-secondary/30 text-secondary-foreground font-medium"
+                          className="px-2 py-0.5 text-xs rounded-full bg-secondary/30 text-secondary-foreground font-mono font-medium"
                         >
                           {tech}
                         </span>

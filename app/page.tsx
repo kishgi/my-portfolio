@@ -19,7 +19,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-background text-foreground min-h-screen font-poppins relative">
+    <div className="bg-background text-foreground min-h-screen font-sans relative">
       {/* Spotlight cursor effect */}
       <div
         className="pointer-events-none fixed inset-0 z-30 transition duration-300 hidden md:block"

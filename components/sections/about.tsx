@@ -7,7 +7,7 @@ export function About() {
   return (
     <section id="about" className="scroll-mt-32">
       <div className="sticky top-0 z-20 -mx-6 mb-4 bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:hidden">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground font-mono">
           About
         </h2>
       </div>

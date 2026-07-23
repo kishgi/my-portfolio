@@ -25,7 +25,7 @@ export function Experience() {
   return (
     <section id="experience" className="scroll-mt-32">
       <div className="sticky top-0 z-20 -mx-6 mb-4 bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:hidden">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground font-mono">
           Experience
         </h2>
       </div>
@@ -49,7 +49,7 @@ export function Experience() {
               className="group relative flex flex-col sm:flex-row gap-4 sm:gap-6 border border-transparent lg:hover:bg-white/[0.06] lg:hover:backdrop-blur-[2px] p-0 lg:p-6 rounded-md transition-all duration-300 cursor-pointer block"
             >
               {/* Date column */}
-              <div className="w-full sm:w-32 shrink-0 text-xs font-bold tracking-wider text-muted-foreground uppercase pt-1">
+              <div className="w-full sm:w-32 shrink-0 text-xs font-semibold tracking-wider text-muted-foreground uppercase pt-1 font-mono">
                 {exp.period}
               </div>
 
@@ -70,7 +70,7 @@ export function Experience() {
                   {exp.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-xs rounded-full bg-secondary/50 text-secondary-foreground font-medium"
+                      className="px-3 py-1 text-xs rounded-full bg-secondary/50 text-secondary-foreground font-mono font-medium"
                     >
                       {tag}
                     </span>

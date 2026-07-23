@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  variable: "--font-fira-code",
+});
 
 export const metadata: Metadata = {
   title: "Kishgintharaam Sathananthan",
@@ -17,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-background text-foreground`}>
+      <body className={`${inter.variable} ${firaCode.variable} bg-background text-foreground antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
