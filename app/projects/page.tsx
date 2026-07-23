@@ -42,13 +42,7 @@ const allProjects = [
     year: "2026",
     title: "Azure DevOps GitOps CI/CD Pipeline",
     madeAt: "Personal Project",
-    builtWith: [
-      "AKS",
-      "ACR",
-      "Docker",
-      "Kubernetes",
-      "ArgoCD"
-    ],
+    builtWith: ["AKS", "ACR", "Docker", "Kubernetes", "ArgoCD"],
     linkText: "",
     url: "",
   },
@@ -64,7 +58,7 @@ const allProjects = [
 
 export default function ProjectsArchive() {
   return (
-    <div className="bg-[#273338] text-slate-200 min-h-screen font-poppins px-6 py-12 md:px-24 md:py-20 lg:px-32">
+    <div className="bg-[#0b1215] text-slate-200 min-h-screen font-poppins px-6 py-12 md:px-24 md:py-20 lg:px-32">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Navigation / Header */}
         <div className="space-y-4">
@@ -72,7 +66,10 @@ export default function ProjectsArchive() {
             href="/"
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:-translate-x-1 transition-all duration-300 group"
           >
-            <ArrowLeft size={16} className="transition-transform group-hover:translate-x-[-2px]" />
+            <ArrowLeft
+              size={16}
+              className="transition-transform group-hover:translate-x-[-2px]"
+            />
             Kishgi
           </Link>
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
@@ -116,7 +113,10 @@ export default function ProjectsArchive() {
                         className="hover:underline inline-flex items-center gap-1.5"
                       >
                         {project.title}
-                        <ExternalLink size={12} className="inline-block sm:hidden text-muted-foreground" />
+                        <ExternalLink
+                          size={12}
+                          className="inline-block sm:hidden text-muted-foreground"
+                        />
                       </a>
                     ) : (
                       project.title
@@ -151,11 +151,15 @@ export default function ProjectsArchive() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors font-medium font-mono text-xs"
                       >
-                        <span className="hidden sm:inline">{project.linkText}</span>
+                        <span className="hidden sm:inline">
+                          {project.linkText}
+                        </span>
                         <ExternalLink size={12} className="inline-block" />
                       </a>
                     ) : (
-                      <span className="text-muted-foreground/30 font-mono text-xs">—</span>
+                      <span className="text-muted-foreground/30 font-mono text-xs">
+                        —
+                      </span>
                     )}
                   </td>
                 </motion.tr>

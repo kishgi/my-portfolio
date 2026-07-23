@@ -46,7 +46,7 @@ export function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative flex flex-col sm:flex-row gap-4 sm:gap-6 border border-transparent hover:bg-white/[0.06] hover:backdrop-blur-[2px] p-6 rounded-md transition-all duration-300 cursor-pointer block"
+              className="group relative flex flex-col sm:flex-row gap-4 sm:gap-6 border border-transparent lg:hover:bg-white/[0.06] lg:hover:backdrop-blur-[2px] p-0 lg:p-6 rounded-md transition-all duration-300 cursor-pointer block"
             >
               {/* Date column */}
               <div className="w-full sm:w-32 shrink-0 text-xs font-bold tracking-wider text-muted-foreground uppercase pt-1">
@@ -82,7 +82,7 @@ export function Experience() {
         </div>
 
         {/* View Full Résumé */}
-        <div className="mt-8">
+        <div className="mt-8 lg:px-6">
           <a
             href="/Kishgintharaam_Resume.pdf"
             target="_blank"

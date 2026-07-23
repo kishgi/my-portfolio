@@ -18,9 +18,9 @@ export function About() {
         transition={{ duration: 0.5 }}
         className="space-y-6"
       >
-        <div className="space-y-4 text-muted-foreground">
+        <div className="space-y-4 text-muted-foreground lg:px-6">
           <p>
-            Hi there! I’m Sathananthan, a Software Engineering undergraduate and
+            Hi there! I’m Kishgi, a Software Engineering undergraduate and
             DevOps Engineer Intern who enjoys building reliable systems and
             solving complex engineering problems. I’m passionate about{" "}
             <b>cloud infrastructure, automation, DevOps, and DevSecOps</b>,
@@ -42,8 +42,8 @@ export function About() {
               explainable machine learning approaches for Kubernetes monitoring
               and pod failure prediction
             </b>
-            . I’m particularly interested in cloud-native technologies,
-            platform engineering, and using automation and AI to improve system
+            . I’m particularly interested in cloud-native technologies, platform
+            engineering, and using automation and AI to improve system
             reliability.
           </p>
 
@@ -60,8 +60,8 @@ export function About() {
 
           <p>
             Outside of engineering, I enjoy exploring new technologies,
-            experimenting with infrastructure setups, and building side
-            projects that turn ideas into working products.
+            experimenting with infrastructure setups, and building side projects
+            that turn ideas into working products.
           </p>
         </div>
 

@@ -70,11 +70,11 @@ export function Sidebar() {
           Kishgintharaam Sathananthan
         </h1>
         <h2 className="text-sm font-semibold text-muted-foreground mb-6">
-          Software Engineering Undergraduate
+          DevOps Engineer
         </h2>
         <p className="mb-10 text-muted-foreground max-w-xs text-md leading-relaxed">
-          Expertising in <b>DevOps</b> and <b>Cloud Engineering</b>, with a
-          passion for building scalable and efficient systems.
+          A random who loves building and deploying scalable and efficient
+          systems without any downtime.
         </p>
 
         {/* Navigation */}
@@ -90,10 +90,12 @@ export function Sidebar() {
           ${isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}
         `}
               >
-                <span className={`
+                <span
+                  className={`
                   h-[1px] transition-all duration-300 rounded-full
                   ${isActive ? "w-16 bg-foreground" : "w-8 bg-muted-foreground/50 group-hover:w-16 group-hover:bg-foreground"}
-                `} />
+                `}
+                />
                 {link.name}
               </Link>
             );

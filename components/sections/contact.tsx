@@ -73,96 +73,94 @@ export function Contact() {
           Contact
         </h2>
       </div>
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto"
-        >
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Hidden input for Web3Forms access key */}
-              <input type="hidden" name="access_key" value={access_key} />
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="lg:px-6"
+      >
+        <div>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Hidden input for Web3Forms access key */}
+            <input type="hidden" name="access_key" value={access_key} />
 
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  className="w-full px-4 py-2 rounded-lg border bg-background"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  className="w-full px-4 py-2 rounded-lg border bg-background"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  rows={4}
-                  className="w-full px-4 py-2 rounded-lg border bg-background"
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium mb-2"
               >
-                Send Message
-              </button>
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg border bg-background"
+                required
+              />
+            </div>
 
-              {/* Submission result message */}
-              {result && (
-                <p className="mt-4 text-center text-sm text-muted-foreground">
-                  {result}
-                </p>
-              )}
-            </form>
-          </div>
-        </motion.div>
-      </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium mb-2"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg border bg-background"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium mb-2"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
+                rows={4}
+                className="w-full px-4 py-2 rounded-lg border bg-background"
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              Send Message
+            </button>
+
+            {/* Submission result message */}
+            {result && (
+              <p className="mt-4 text-center text-sm text-muted-foreground">
+                {result}
+              </p>
+            )}
+          </form>
+        </div>
+      </motion.div>
     </section>
   );
 }

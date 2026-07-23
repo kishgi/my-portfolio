@@ -77,7 +77,7 @@ export function Projects() {
               whileInView: { opacity: 1, y: 0 },
               viewport: { once: true },
               transition: { duration: 0.5, delay: index * 0.1 },
-              className: `group relative flex flex-col gap-3 border border-transparent hover:bg-white/[0.06] hover:backdrop-blur-[2px] p-6 rounded-md transition-all duration-300 ${
+              className: `group relative flex flex-col gap-3 border border-transparent lg:hover:bg-white/[0.06] lg:hover:backdrop-blur-[2px] p-0 lg:p-6 rounded-md transition-all duration-300 ${
                 targetUrl ? "cursor-pointer" : ""
               }`,
             };
@@ -133,7 +133,7 @@ export function Projects() {
         </div>
 
         {/* View Full Project Archive */}
-        <div className="mt-8">
+        <div className="mt-8 lg:px-6">
           <a
             href="/projects"
             className="inline-flex items-center gap-1 text-sm font-semibold text-foreground hover:text-primary transition-colors group"
