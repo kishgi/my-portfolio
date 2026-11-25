@@ -7,6 +7,22 @@ import Link from "next/link";
 const allProjects = [
   {
     year: "2026",
+    title: "K8S-Observix - Kubernetes Pod Failure Prediction",
+    madeAt: "Final Year Research Project",
+    builtWith: [
+      "Python",
+      "Scikit-learn",
+      "Random Forest",
+      "XGBoost",
+      "SHAP",
+      "AKS",
+      "Kubernetes",
+    ],
+    linkText: "https://github.com/kishgi/k8s-observix",
+    url: "https://github.com/kishgi/k8s-observix",
+  },
+  {
+    year: "2026",
     title: "BoostPro - Email & SMS Marketing Platform",
     madeAt: "VinaSai Inc",
     builtWith: ["Next.js", "Typescript", "Amazon SES", "Twilio"],

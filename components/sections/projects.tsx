@@ -13,38 +13,38 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "BoostPro",
+    title: "K8S-Observix",
     description:
-      "A full-stack email and SMS marketing application built at VinaSai Inc. using Next.js, Amazon SES, and Twilio API.",
-    tags: ["Next.js", "Typescript", "Amazon SES"],
-    demo: "https://boostpro.ca",
-  },
-  {
-    title: "Match My Stuff",
-    description:
-      "An AI-integrated real-time lost and found application featuring an interactive map. Built for a 24-hour Buildathon where we won 3rd place on our track.",
-    tags: ["Next.js", "Typescript", "Firebase"],
-    demo: "https://matchmystuff.vercel.app/",
+      "Final Year Research Project: Developed an explainable machine learning framework for predicting Kubernetes pod failures using multi-source telemetry from Azure Kubernetes Service. Integrated Random Forest, XGBoost, and SHAP to deliver failure predictions and actionable explanations through a real-time Kubernetes monitoring dashboard.",
+    tags: [
+      "Python",
+      "Scikit-learn",
+      "Random Forest",
+      "XGBoost",
+      "SHAP",
+      "Kubernetes",
+    ],
+    github: "https://github.com/kishgi/k8s-observix",
   },
   {
     title: "Full DevSecOps Pipeline for Netflix Clone",
     description:
-      "Implemented a complete DevSecOps pipeline with Jenkins, SonarQube, Trivy, OWASP Dependency Check, Docker, Kubernetes (EKS), ArgoCD, and monitoring with Prometheus & Grafana.",
+      "Implemented a complete DevSecOps pipeline with Jenkins, SonarQube, Trivy, OWASP Dependency Check, Docker, Kubernetes (EKS), ArgoCD, and monitoring with Prometheus and Grafana.",
     tags: ["EKS", "ArgoCD", "Prometheus", "Grafana"],
     github: "https://github.com/kishgi/netflix-clone",
   },
   {
-    title: "CI/CD pipeline for Java App using Jenkins",
+    title: "CI/CD Pipeline for Java App using Jenkins",
     description:
-      "Java web app with full CI/CD pipeline, containerized and deployed to Kubernetes.",
+      "Built a Java web application with an end-to-end CI/CD pipeline, integrating automated code analysis, containerization, and Kubernetes deployment.",
     tags: ["Java", "Docker", "Kubernetes", "Jenkins", "SonarQube", "DevOps"],
     github: "https://github.com/kishgi/java-app",
   },
   {
     title:
-      "Azure DevOps GitOps CI/CD Pipeline for a multiple microservices application",
+      "Azure DevOps GitOps CI/CD Pipeline for a Multi-Microservice Application",
     description:
-      "Implemented an end-to-end CI/CD pipeline using Azure DevOps, AKS, and ArgoCD to deploy the Docker Voting App with GitOps practices.",
+      "Implemented an end-to-end CI/CD pipeline using Azure DevOps, AKS, and ArgoCD to deploy the Docker Voting App following GitOps practices.",
     tags: [
       "Azure Kubernetes Service (AKS)",
       "Azure Container Registry (ACR)",
@@ -63,6 +63,7 @@ export function Projects() {
           Projects
         </h2>
       </div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -72,11 +73,15 @@ export function Projects() {
         <div className="flex flex-col gap-8">
           {projects.map((project, index) => {
             const targetUrl = project.demo || project.github;
+
             const motionProps = {
               initial: { opacity: 0, y: 20 },
               whileInView: { opacity: 1, y: 0 },
               viewport: { once: true },
-              transition: { duration: 0.5, delay: index * 0.1 },
+              transition: {
+                duration: 0.5,
+                delay: index * 0.1,
+              },
               className: `group relative flex flex-col gap-3 border border-transparent lg:hover:bg-white/[0.06] lg:hover:backdrop-blur-[2px] p-0 lg:p-6 rounded-md transition-all duration-300 ${
                 targetUrl ? "cursor-pointer" : ""
               }`,
@@ -87,16 +92,19 @@ export function Projects() {
                 <div className="space-y-1">
                   <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
                     {project.title}
+
                     {targetUrl && (
                       <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                         ↗
                       </span>
                     )}
                   </h3>
+
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
                 </div>
+
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
@@ -148,4 +156,3 @@ export function Projects() {
     </section>
   );
 }
-
